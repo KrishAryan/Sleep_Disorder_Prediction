@@ -10,7 +10,7 @@ st.header('Sleep-Disorder-Prediction 🚀')
 
 gender = st.selectbox('Enter your gender',("Male", "Female"))
 age = st.number_input("enter your age")
-occupation = st.selectbox("Enter your Occupation", ("Doctor"))
+occupation = st.selectbox("Enter your Occupation", ("Doctor","Software Engineer","Sales Representative","Teacher","Nurse","Engineer","Accountant","	Scientist","Lawyer","Salesperson","Manager"))
 sleep_duration = st.number_input("enter your Sleep Duration in Hrs")
 quality_sleep = st.number_input("enter your Quality of Sleep in Hrs")
 physical_level = st.number_input("enter your Physical Activity Level")
