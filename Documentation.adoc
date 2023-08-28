@@ -1,0 +1,63 @@
+= MLOps Sleep Disorder Prediction Application - GSoC Final Evaluation
+
+[[introduction]]
+== Introduction
+
+In the fast-paced world we live in, sleep disorders have become increasingly common and are often overlooked. As part of Google Summer of Code (GSoC) project, I have developed an innovative solution to address this issue. My project focuses on building an MLOps sleep disorder prediction application using state-of-the-art technologies like Rancher, Longhorn, and Kubeflow Pipeline. This application aims to predict whether an individual has sleep disorders such as insomnia or sleep apnea, thereby aiding in early diagnosis and intervention. In this blog post, I will provide a comprehensive overview of the technical aspects of my project and guide you through the installation and usage of the application.
+
+[[technical-overview]]
+== Technical Overview
+
+The MLOps sleep disorder prediction application is built using a combination of containerization, storage orchestration, and machine learning pipeline technologies. The key components of this solution include Rancher for managing Kubernetes clusters, Longhorn for persistent storage management, and Kubeflow Pipeline for automating the end-to-end machine learning workflow.
+
+[[prerequisites]]
+== Prerequisites
+
+Before we dive into the installation process, there are a few prerequisites you need to have in place. Ensure you have a working knowledge of Kubernetes, Docker, and basic machine learning concepts. You'll also need a machine with sufficient resources to run Kubernetes clusters.
+
+[[install-rancher]]
+== Install Rancher
+
+Rancher is a powerful tool for managing Kubernetes clusters. In this section, I'll guide you through the process of setting up Rancher on your machine and creating the necessary Kubernetes clusters for our application.
+
+[[install-longhorn]]
+== Install Longhorn
+
+Longhorn provides a reliable and easy-to-use solution for managing persistent storage in Kubernetes. Here, I'll walk you through the steps to install and configure Longhorn to ensure data durability and availability for our application.
+
+[[install-kubeflow-pipeline]]
+== Install Kubeflow Pipeline
+
+Kubeflow Pipeline simplifies the orchestration of complex machine learning workflows. I'll demonstrate how to set up Kubeflow Pipeline and create a pipeline that automates the data preprocessing, model training, and evaluation processes for our sleep disorder prediction model.
+
+[[download-data]]
+== Download the Data
+
+For any machine learning project, data is crucial. In this section, I'll explain where to obtain the sleep disorder dataset and how to preprocess it to prepare it for training.
+
+[[streamlit-interface]]
+== Streamlit Interface
+
+A user-friendly interface is essential for any real-world application. I'll introduce Streamlit, a Python library for creating interactive web applications, and show you how to develop a user interface for our sleep disorder prediction app.
+
+[[machine-learning-model]]
+== Machine Learning Model
+
+The heart of our application is the machine learning model. I'll detail the architecture and design choices of the model used for sleep disorder prediction. This section will also cover how the model is trained and validated within the Kubeflow Pipeline.
+
+[[connect-external-client]]
+== Connect as External Client
+
+In some scenarios, you might want to connect to the prediction application from an external client. I'll guide you through the steps to set up secure communication and interact with the application using RESTful APIs.
+
+[[demonstration]]
+== Demonstration
+
+To provide a complete understanding of the project's functionality, I'll walk you through a step-by-step demonstration of how the application works. This will include launching the application, submitting data for prediction, and interpreting the results.
+
+[[conclusion]]
+== Conclusion
+
+In this blog post, we explored the development of an MLOps sleep disorder prediction application as part of my GSoC project. By leveraging technologies like Rancher, Longhorn, and Kubeflow Pipeline, we've created a comprehensive solution that aids in early detection of sleep disorders. This project showcases the powerful synergy between machine learning and DevOps practices, highlighting the importance of well-orchestrated pipelines for real-world applications.
+
+As you prepare your GSoC final evaluation, remember to include relevant code snippets, screenshots, and any challenges you faced during the development process. Good luck with your final evaluation!
