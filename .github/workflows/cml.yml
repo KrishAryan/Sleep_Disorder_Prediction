@@ -32,9 +32,9 @@ jobs:
           
         continue-on-error: true
 
-  Docker-Image-Build:
+  docker_image_build:
     runs-on: ubuntu-latest
-    needs: train-and-report
+    needs: train_and_report
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -48,7 +48,7 @@ jobs:
 
   Installing_VPN_and_Deploying_apps_in_K3s_Clusters: 
     runs-on: ubuntu-latest
-    needs: train-and-report
+    needs: docker_image_build
     steps:
       - name: Installing  OpenVPN
         run: |
