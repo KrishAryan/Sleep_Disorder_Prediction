@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
           
-      - name: Install Dependencies
+      - name: Installings Dependencies
         run: |
           pip install -r requirements.txt
       
@@ -32,7 +32,7 @@ jobs:
           
         continue-on-error: true
 
-  Docker-Automation:
+  Docker Image Build:
     runs-on: ubuntu-latest
     needs: train-and-report
     steps:
@@ -46,7 +46,11 @@ jobs:
           #docker image ls 
           docker push krisharyan36/sdp:latest
 
-      - name: Install OpenVPN
+  Installing VPN & Deploying apps in K3s Clusters: 
+    runs-on: ubuntu-latest
+    needs: train-and-report
+    steps:
+      - name: Installing  OpenVPN
         run: |
             sudo apt update
             sudo apt install -y openvpn openvpn-systemd-resolved
@@ -55,8 +59,9 @@ jobs:
         with:
           config_file: .github/workflows/client.ovpn
           username: ${{ secrets.OVPN_USERNAME }}
-          password: ${{ secrets.OVPN_PASSWORD }}
-      - name: Deploying SDP app in K8s Clusters
+          password: ${{ secrets.OVPN_PASSWORD 
+		  
+      - name: Deploying SDP app in K3s Clusters
         uses: appleboy/ssh-action@master
         with: 
           proxy_host: ${{ secrets.SERVER_HOST }}
