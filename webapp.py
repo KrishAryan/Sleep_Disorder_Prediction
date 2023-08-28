@@ -7,7 +7,7 @@ import numpy as np
 stn = StandardScaler()
 label_encoder = LabelEncoder()
 
-st.header('Sleep-Disorder-Prediction 🚀')
+st.header('Sleep-Disorder-Prediction 🛌')
 
 gender = st.selectbox('Enter your gender',("Male", "Female"))
 age = int(st.number_input("enter your age"))
