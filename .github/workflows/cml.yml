@@ -45,11 +45,7 @@ jobs:
           docker image build -t krisharyan36/sdp:latest .  
           #docker image ls 
           docker push krisharyan36/sdp:latest
-
-  Installing_VPN_and_Deploying_apps_in_K3s_Clusters: 
-    runs-on: ubuntu-latest
-    needs: train_and_report
-    steps:
+          
       - name: Installing  OpenVPN
         run: |
             sudo apt update
